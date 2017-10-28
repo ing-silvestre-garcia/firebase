@@ -7,7 +7,7 @@
 //
 
 #import "Home.h"
-
+@import Firebase;
 @interface Home ()
 
 @end
@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [FIRAnalytics logEventWithName:@"pantalla_login"
+                        parameters:@{
+                                     @"name": @"login",
+                                     @"full_text": @"accedieron a la pantalla de lgon"
+                                     }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,5 +30,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLogin:(UIButton *)sender {
+    [FIRAnalytics logEventWithName:@"boton_login"
+                        parameters:@{
+                                     @"name": @"login",
+                                     @"full_text": @"accedieron a la pantalla de login"
+                                     }];
+    self performSegueWithIdentifier:<#(nonnull NSString *)#> sender:<#(nullable id)#>
+}
 
 @end
