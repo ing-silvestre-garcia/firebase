@@ -42,17 +42,17 @@
                     <navigationItem key="navigationItem" id="eA6-tP-zuh"/>
                     <connections>
                         <outlet property="btnLogin" destination="Cgy-Sp-EJ3" id="Xwu-uV-qEq"/>
-                        <segue destination="J8b-mz-vzt" kind="push" id="6Y3-9s-HlC"/>
+                        <segue destination="J8b-mz-vzt" kind="push" identifier="toTable" id="6Y3-9s-HlC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-178.40000000000001" y="-203.74812593703149"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Lista-->
         <scene sceneID="G98-FR-PtV">
             <objects>
-                <tableViewController id="J8b-mz-vzt" sceneMemberID="viewController">
+                <tableViewController id="J8b-mz-vzt" customClass="Lista" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p7X-3n-RrP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

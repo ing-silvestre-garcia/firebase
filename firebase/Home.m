@@ -36,7 +36,7 @@
                                      @"name": @"login",
                                      @"full_text": @"accedieron a la pantalla de login"
                                      }];
-    self performSegueWithIdentifier:<#(nonnull NSString *)#> sender:<#(nullable id)#>
+    [self performSegueWithIdentifier:@"toTable" sender:nil];
 }
 
 @end

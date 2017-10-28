@@ -10,6 +10,7 @@
 		50949062F2BB6FAA010D6526 /* libPods-firebaseUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E64023C3FCF3F175D3B65E70 /* libPods-firebaseUITests.a */; };
 		CA37B966409CBC02DB2553FC /* libPods-firebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 928AEA55DDDC97D94EEBE6FF /* libPods-firebase.a */; };
 		D711EFDF1FA50C1A001DD2DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D711EFDE1FA50C1A001DD2DD /* GoogleService-Info.plist */; };
+		D711EFE51FA51302001DD2DD /* Lista.m in Sources */ = {isa = PBXBuildFile; fileRef = D711EFE41FA51302001DD2DD /* Lista.m */; };
 		D7EDFE861FA4F37A004CD2BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE851FA4F37A004CD2BC /* main.m */; };
 		D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */; };
 		D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE8B1FA4F37A004CD2BC /* Home.m */; };
@@ -47,6 +48,8 @@
 		9EF86244C5A22F045EA911B3 /* Pods-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-firebase/Pods-firebase.release.xcconfig"; sourceTree = "<group>"; };
 		A2FD22D7586C9FBD08C953F7 /* Pods-firebaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-firebaseUITests/Pods-firebaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D711EFDE1FA50C1A001DD2DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D711EFE31FA51302001DD2DD /* Lista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lista.h; sourceTree = "<group>"; };
+		D711EFE41FA51302001DD2DD /* Lista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lista.m; sourceTree = "<group>"; };
 		D7EDFE811FA4F37A004CD2BC /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDFE851FA4F37A004CD2BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 			children = (
 				D7EDFE8A1FA4F37A004CD2BC /* Home.h */,
 				D7EDFE8B1FA4F37A004CD2BC /* Home.m */,
+				D711EFE31FA51302001DD2DD /* Lista.h */,
+				D711EFE41FA51302001DD2DD /* Lista.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */,
 				D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */,
 				D7EDFE861FA4F37A004CD2BC /* main.m in Sources */,
+				D711EFE51FA51302001DD2DD /* Lista.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
