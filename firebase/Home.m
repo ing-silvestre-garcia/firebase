@@ -6,13 +6,13 @@
 //  Copyright © 2017 silver. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "Home.h"
 
-@interface AppDelegate ()
+@interface Home ()
 
 @end
 
-@implementation AppDelegate
+@implementation Home
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

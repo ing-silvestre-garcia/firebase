@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D7EDFE861FA4F37A004CD2BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE851FA4F37A004CD2BC /* main.m */; };
-		D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */; };
+		D7EDFE891FA4F37A004CD2BC /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* Home.m */; };
 		D7EDFE8C1FA4F37A004CD2BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */; };
 		D7EDFE8F1FA4F37A004CD2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7EDFE8D1FA4F37A004CD2BC /* Main.storyboard */; };
 		D7EDFE911FA4F37A004CD2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7EDFE901FA4F37A004CD2BC /* Assets.xcassets */; };
@@ -37,8 +37,8 @@
 /* Begin PBXFileReference section */
 		D7EDFE811FA4F37A004CD2BC /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDFE851FA4F37A004CD2BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7EDFE871FA4F37A004CD2BC /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		D7EDFE881FA4F37A004CD2BC /* Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		D7EDFE8A1FA4F37A004CD2BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D7EDFE8E1FA4F37A004CD2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,10 +101,8 @@
 		D7EDFE831FA4F37A004CD2BC /* firebase */ = {
 			isa = PBXGroup;
 			children = (
-				D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */,
-				D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */,
-				D7EDFE8A1FA4F37A004CD2BC /* ViewController.h */,
-				D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */,
+				D7EDFEB81FA4F3B3004CD2BC /* Controller */,
+				D7EDFEB71FA4F389004CD2BC /* Main */,
 				D7EDFE8D1FA4F37A004CD2BC /* Main.storyboard */,
 				D7EDFE901FA4F37A004CD2BC /* Assets.xcassets */,
 				D7EDFE921FA4F37A004CD2BC /* LaunchScreen.storyboard */,
@@ -138,6 +136,24 @@
 				D7EDFEAB1FA4F37B004CD2BC /* Info.plist */,
 			);
 			path = firebaseUITests;
+			sourceTree = "<group>";
+		};
+		D7EDFEB71FA4F389004CD2BC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D7EDFE871FA4F37A004CD2BC /* Home.h */,
+				D7EDFE881FA4F37A004CD2BC /* Home.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D7EDFEB81FA4F3B3004CD2BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7EDFE8A1FA4F37A004CD2BC /* ViewController.h */,
+				D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EDFE8C1FA4F37A004CD2BC /* ViewController.m in Sources */,
-				D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */,
+				D7EDFE891FA4F37A004CD2BC /* Home.m in Sources */,
 				D7EDFE861FA4F37A004CD2BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
