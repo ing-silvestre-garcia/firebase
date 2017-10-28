@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  firebase
 //
 //  Created by Silvestre Garcia on 10/28/17.
@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Home : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface Home : UIViewController
 
 @end
 

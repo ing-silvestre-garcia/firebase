@@ -6,6 +6,7 @@ target 'firebase' do
   # use_frameworks!
 
   # Pods for firebase
+pod 'Firebase/Core'
 
   target 'firebaseTests' do
     inherit! :search_paths

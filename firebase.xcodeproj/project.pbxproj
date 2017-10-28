@@ -10,8 +10,8 @@
 		50949062F2BB6FAA010D6526 /* libPods-firebaseUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E64023C3FCF3F175D3B65E70 /* libPods-firebaseUITests.a */; };
 		CA37B966409CBC02DB2553FC /* libPods-firebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 928AEA55DDDC97D94EEBE6FF /* libPods-firebase.a */; };
 		D7EDFE861FA4F37A004CD2BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE851FA4F37A004CD2BC /* main.m */; };
-		D7EDFE891FA4F37A004CD2BC /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* Home.m */; };
-		D7EDFE8C1FA4F37A004CD2BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */; };
+		D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */; };
+		D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE8B1FA4F37A004CD2BC /* Home.m */; };
 		D7EDFE8F1FA4F37A004CD2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7EDFE8D1FA4F37A004CD2BC /* Main.storyboard */; };
 		D7EDFE911FA4F37A004CD2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7EDFE901FA4F37A004CD2BC /* Assets.xcassets */; };
 		D7EDFE941FA4F37A004CD2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7EDFE921FA4F37A004CD2BC /* LaunchScreen.storyboard */; };
@@ -48,10 +48,10 @@
 		A2FD22D7586C9FBD08C953F7 /* Pods-firebaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-firebaseUITests/Pods-firebaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7EDFE811FA4F37A004CD2BC /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDFE851FA4F37A004CD2BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7EDFE871FA4F37A004CD2BC /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
-		D7EDFE881FA4F37A004CD2BC /* Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
-		D7EDFE8A1FA4F37A004CD2BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7EDFE8A1FA4F37A004CD2BC /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		D7EDFE8B1FA4F37A004CD2BC /* Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		D7EDFE8E1FA4F37A004CD2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7EDFE901FA4F37A004CD2BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7EDFE931FA4F37A004CD2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -184,8 +184,8 @@
 		D7EDFEB71FA4F389004CD2BC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D7EDFE871FA4F37A004CD2BC /* Home.h */,
-				D7EDFE881FA4F37A004CD2BC /* Home.m */,
+				D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */,
+				D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -193,8 +193,8 @@
 		D7EDFEB81FA4F3B3004CD2BC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D7EDFE8A1FA4F37A004CD2BC /* ViewController.h */,
-				D7EDFE8B1FA4F37A004CD2BC /* ViewController.m */,
+				D7EDFE8A1FA4F37A004CD2BC /* Home.h */,
+				D7EDFE8B1FA4F37A004CD2BC /* Home.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -489,8 +489,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7EDFE8C1FA4F37A004CD2BC /* ViewController.m in Sources */,
-				D7EDFE891FA4F37A004CD2BC /* Home.m in Sources */,
+				D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */,
+				D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */,
 				D7EDFE861FA4F37A004CD2BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
