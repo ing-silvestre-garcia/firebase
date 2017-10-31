@@ -11,6 +11,8 @@
 		CA37B966409CBC02DB2553FC /* libPods-firebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 928AEA55DDDC97D94EEBE6FF /* libPods-firebase.a */; };
 		D711EFDF1FA50C1A001DD2DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D711EFDE1FA50C1A001DD2DD /* GoogleService-Info.plist */; };
 		D711EFE51FA51302001DD2DD /* Lista.m in Sources */ = {isa = PBXBuildFile; fileRef = D711EFE41FA51302001DD2DD /* Lista.m */; };
+		D76A57421FA829550070B042 /* cellMainTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A57411FA829550070B042 /* cellMainTable.m */; };
+		D76A57461FA82AFB0070B042 /* cellMainTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76A57451FA82AFB0070B042 /* cellMainTable.xib */; };
 		D7EDFE861FA4F37A004CD2BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE851FA4F37A004CD2BC /* main.m */; };
 		D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */; };
 		D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE8B1FA4F37A004CD2BC /* Home.m */; };
@@ -50,6 +52,9 @@
 		D711EFDE1FA50C1A001DD2DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D711EFE31FA51302001DD2DD /* Lista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lista.h; sourceTree = "<group>"; };
 		D711EFE41FA51302001DD2DD /* Lista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lista.m; sourceTree = "<group>"; };
+		D76A57401FA829550070B042 /* cellMainTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellMainTable.h; sourceTree = "<group>"; };
+		D76A57411FA829550070B042 /* cellMainTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellMainTable.m; sourceTree = "<group>"; };
+		D76A57451FA82AFB0070B042 /* cellMainTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMainTable.xib; sourceTree = "<group>"; };
 		D7EDFE811FA4F37A004CD2BC /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDFE851FA4F37A004CD2BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +126,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D76A573F1FA828BE0070B042 /* Celdas */ = {
+			isa = PBXGroup;
+			children = (
+				D76A57401FA829550070B042 /* cellMainTable.h */,
+				D76A57411FA829550070B042 /* cellMainTable.m */,
+				D76A57451FA82AFB0070B042 /* cellMainTable.xib */,
+			);
+			name = Celdas;
+			sourceTree = "<group>";
+		};
 		D7EDFE781FA4F37A004CD2BC = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +161,7 @@
 		D7EDFE831FA4F37A004CD2BC /* firebase */ = {
 			isa = PBXGroup;
 			children = (
+				D76A573F1FA828BE0070B042 /* Celdas */,
 				D7EDFEB81FA4F3B3004CD2BC /* Controller */,
 				D7EDFEB71FA4F389004CD2BC /* Main */,
 				D7EDFE8D1FA4F37A004CD2BC /* Main.storyboard */,
@@ -320,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EDFE941FA4F37A004CD2BC /* LaunchScreen.storyboard in Resources */,
+				D76A57461FA82AFB0070B042 /* cellMainTable.xib in Resources */,
 				D711EFDF1FA50C1A001DD2DD /* GoogleService-Info.plist in Resources */,
 				D7EDFE911FA4F37A004CD2BC /* Assets.xcassets in Resources */,
 				D7EDFE8F1FA4F37A004CD2BC /* Main.storyboard in Resources */,
@@ -497,6 +514,7 @@
 				D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */,
 				D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */,
 				D7EDFE861FA4F37A004CD2BC /* main.m in Sources */,
+				D76A57421FA829550070B042 /* cellMainTable.m in Sources */,
 				D711EFE51FA51302001DD2DD /* Lista.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

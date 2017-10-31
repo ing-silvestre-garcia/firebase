@@ -7,9 +7,12 @@
 //
 
 #import "Lista.h"
+#import "cellMainTable.h"
 @import Firebase;
 @interface Lista ()
 
+@property NSMutableArray *characters;
+@property NSDictionary *charactersInfo;
 @end
 
 @implementation Lista
@@ -34,70 +37,88 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+//-------------------------------------------------------------------------------
+- (void)initController {
+    self.characters = [[NSMutableArray alloc] init];
+    [self.characters addObject:@{
+                                 @"name":@"Zapato 1"
+                                 }];
+    [self.characters addObject:@{
+                                 @"name":@"Zapato 2"
+                                 }];
+    [self.characters addObject:@{
+                                 @"name":@"Zapato 3"
+                                 }];
+    [self.characters addObject:@{
+                                 @"name":@"Zapato 4"
+                                 }];
+}
 
+/**********************************************************************************************/
+#pragma mark - Table source and delegate methods
+/**********************************************************************************************/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
-
+//-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.characters.count;
 }
-
-/*
+//-------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 64;
+}
+//-------------------------------------------------------------------------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //Initialize cells
+    cellMainTable *cell = (cellMainTable *)[tableView dequeueReusableCellWithIdentifier:@"cellMainTable"];
     
-    // Configure the cell...
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"cellMainTable" bundle:nil] forCellReuseIdentifier:@"cellMainTable"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cellMainTable"];
+    }
+    //Fill cell with info from arrays
+    NSDictionary *posicionDictionary = self.characters[indexPath.row];
+    cell.userName.text       = posicionDictionary[@"name"];
+    cell.userAge.text        = posicionDictionary[@"age"];
+    cell.userImage.image      = posicionDictionary[@"image"];
     
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+//-------------------------------------------------------------------------------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *seleccionDictionary = self.characters[indexPath.row];
+    
+    [self performSegueWithIdentifier:@"toDetailPerson" sender:seleccionDictionary];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+/**********************************************************************************************/
+#pragma mark - Action methods
+/**********************************************************************************************/
+- (IBAction)btnAddPressed:(id)sender {
+    /**
+     [self.userNames addObject:@"Walter"];
+     [self.userAges addObject:@"37 años"];
+     [self.userImages addObject:@"jon.jpg"];
+     [self.tblMain reloadData];
+     */
+    [self performSegueWithIdentifier:@"toNewPerson" sender:nil];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark - NewPersonDelegate
+- (void)didAddPersonName:(NSString *)name andImageSelected:(UIImage *)image addPersonAge:(NSString *)age {
+    [self.characters addObject:@{
+                                 @"name":name,
+                                 }];
+    [self.tablePrincipal reloadData];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+#pragma mark - Segue
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    if ([segue.identifier isEqualToString:@"toDetailPerson"]) {
+        DetailPersonViewController *navigationController = [segue destinationViewController];
+        navigationController.personInfo = sender;
+    }}
+
 
 @end
