@@ -79,9 +79,7 @@
     }
     //Fill cell with info from arrays
     NSDictionary *posicionDictionary = self.characters[indexPath.row];
-    cell.userName.text       = posicionDictionary[@"name"];
-    cell.userAge.text        = posicionDictionary[@"age"];
-    cell.userImage.image      = posicionDictionary[@"image"];
+    cell.zapatoLabel.text       = posicionDictionary[@"name"];
     
     return cell;
 }
@@ -89,7 +87,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *seleccionDictionary = self.characters[indexPath.row];
     
-    [self performSegueWithIdentifier:@"toDetailPerson" sender:seleccionDictionary];
+    [self performSegueWithIdentifier:@"toDetail" sender:seleccionDictionary];
 }
 /**********************************************************************************************/
 #pragma mark - Action methods
@@ -115,7 +113,7 @@
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"toDetailPerson"]) {
+    if ([segue.identifier isEqualToString:@"toDetail"]) {
         DetailPersonViewController *navigationController = [segue destinationViewController];
         navigationController.personInfo = sender;
     }}

@@ -74,6 +74,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fAM-eZ-Z0i"/>
                     <connections>
+                        <outlet property="tablePrincipal" destination="aTn-Zf-D58" id="CIr-vS-I4l"/>
                         <segue destination="2Bc-1Z-jQ6" kind="push" identifier="toDetail" id="2i1-ON-Zac"/>
                     </connections>
                 </tableViewController>
