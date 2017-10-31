@@ -74,17 +74,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fAM-eZ-Z0i"/>
                     <connections>
-                        <segue destination="2Bc-1Z-jQ6" kind="push" id="2i1-ON-Zac"/>
+                        <segue destination="2Bc-1Z-jQ6" kind="push" identifier="toDetail" id="2i1-ON-Zac"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rej-cD-S4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="665" y="-196"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle-->
         <scene sceneID="IR5-ER-ebT">
             <objects>
-                <viewController id="2Bc-1Z-jQ6" sceneMemberID="viewController">
+                <viewController id="2Bc-1Z-jQ6" customClass="Detalle" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cA8-HH-sDP"/>
                         <viewControllerLayoutGuide type="bottom" id="hUf-lB-O00"/>
@@ -105,17 +105,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="1WQ-6x-bZh"/>
                     <connections>
-                        <segue destination="s0i-uf-JsN" kind="push" id="fbS-1i-vBh"/>
+                        <segue destination="s0i-uf-JsN" kind="push" identifier="toConfirm" id="fbS-1i-vBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uA-b7-5u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1469.5999999999999" y="-197.45127436281859"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmacion-->
         <scene sceneID="nU6-97-gB7">
             <objects>
-                <viewController id="s0i-uf-JsN" sceneMemberID="viewController">
+                <viewController id="s0i-uf-JsN" customClass="Confirmacion" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7XU-dR-axv"/>
                         <viewControllerLayoutGuide type="bottom" id="QBm-DW-SWJ"/>
@@ -136,7 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="n1b-IQ-trJ"/>
                     <connections>
-                        <segue destination="J8b-mz-vzt" kind="push" id="nrU-Ge-3zm"/>
+                        <segue destination="J8b-mz-vzt" kind="push" identifier="toTable" id="nrU-Ge-3zm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJB-pZ-fs2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,6 +161,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Y3-9s-HlC"/>
+        <segue reference="nrU-Ge-3zm"/>
     </inferredMetricsTieBreakers>
 </document>

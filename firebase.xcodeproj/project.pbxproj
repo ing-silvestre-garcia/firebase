@@ -13,6 +13,8 @@
 		D711EFE51FA51302001DD2DD /* Lista.m in Sources */ = {isa = PBXBuildFile; fileRef = D711EFE41FA51302001DD2DD /* Lista.m */; };
 		D76A57421FA829550070B042 /* cellMainTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A57411FA829550070B042 /* cellMainTable.m */; };
 		D76A57461FA82AFB0070B042 /* cellMainTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76A57451FA82AFB0070B042 /* cellMainTable.xib */; };
+		D76A57491FA831740070B042 /* Detalle.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A57481FA831740070B042 /* Detalle.m */; };
+		D76A574C1FA8318F0070B042 /* Confirmacion.m in Sources */ = {isa = PBXBuildFile; fileRef = D76A574B1FA8318F0070B042 /* Confirmacion.m */; };
 		D7EDFE861FA4F37A004CD2BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE851FA4F37A004CD2BC /* main.m */; };
 		D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE881FA4F37A004CD2BC /* AppDelegate.m */; };
 		D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDFE8B1FA4F37A004CD2BC /* Home.m */; };
@@ -55,6 +57,10 @@
 		D76A57401FA829550070B042 /* cellMainTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellMainTable.h; sourceTree = "<group>"; };
 		D76A57411FA829550070B042 /* cellMainTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellMainTable.m; sourceTree = "<group>"; };
 		D76A57451FA82AFB0070B042 /* cellMainTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMainTable.xib; sourceTree = "<group>"; };
+		D76A57471FA831740070B042 /* Detalle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detalle.h; sourceTree = "<group>"; };
+		D76A57481FA831740070B042 /* Detalle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detalle.m; sourceTree = "<group>"; };
+		D76A574A1FA8318F0070B042 /* Confirmacion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Confirmacion.h; sourceTree = "<group>"; };
+		D76A574B1FA8318F0070B042 /* Confirmacion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Confirmacion.m; sourceTree = "<group>"; };
 		D7EDFE811FA4F37A004CD2BC /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDFE851FA4F37A004CD2BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7EDFE871FA4F37A004CD2BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -216,6 +222,10 @@
 				D7EDFE8B1FA4F37A004CD2BC /* Home.m */,
 				D711EFE31FA51302001DD2DD /* Lista.h */,
 				D711EFE41FA51302001DD2DD /* Lista.m */,
+				D76A57471FA831740070B042 /* Detalle.h */,
+				D76A57481FA831740070B042 /* Detalle.m */,
+				D76A574A1FA8318F0070B042 /* Confirmacion.h */,
+				D76A574B1FA8318F0070B042 /* Confirmacion.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -513,9 +523,11 @@
 			files = (
 				D7EDFE8C1FA4F37A004CD2BC /* Home.m in Sources */,
 				D7EDFE891FA4F37A004CD2BC /* AppDelegate.m in Sources */,
+				D76A574C1FA8318F0070B042 /* Confirmacion.m in Sources */,
 				D7EDFE861FA4F37A004CD2BC /* main.m in Sources */,
 				D76A57421FA829550070B042 /* cellMainTable.m in Sources */,
 				D711EFE51FA51302001DD2DD /* Lista.m in Sources */,
+				D76A57491FA831740070B042 /* Detalle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
