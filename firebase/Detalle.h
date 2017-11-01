@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface Detalle : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnConfirm;
 
 @end

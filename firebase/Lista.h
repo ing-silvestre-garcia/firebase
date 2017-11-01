@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface Lista : UITableViewController
-@property (weak, nonatomic) IBOutlet UITableViewCell *tablePrincipal;
+
 
 @end

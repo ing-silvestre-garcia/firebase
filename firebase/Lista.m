@@ -61,28 +61,13 @@
     return 1;
 }
 //-------------------------------------------------------------------------------
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.characters.count;
-}
+
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 64;
 }
 //-------------------------------------------------------------------------------
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Initialize cells
-    cellMainTable *cell = (cellMainTable *)[tableView dequeueReusableCellWithIdentifier:@"cellMainTable"];
-    
-    if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"cellMainTable" bundle:nil] forCellReuseIdentifier:@"cellMainTable"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"cellMainTable"];
-    }
-    //Fill cell with info from arrays
-    NSDictionary *posicionDictionary = self.characters[indexPath.row];
-    cell.zapatoLabel.text       = posicionDictionary[@"name"];
-    
-    return cell;
-}
+
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *seleccionDictionary = self.characters[indexPath.row];
@@ -102,20 +87,17 @@
     [self performSegueWithIdentifier:@"toNewPerson" sender:nil];
 }
 
-#pragma mark - NewPersonDelegate
-- (void)didAddPersonName:(NSString *)name andImageSelected:(UIImage *)image addPersonAge:(NSString *)age {
-    [self.characters addObject:@{
-                                 @"name":name,
-                                 }];
-    [self.tablePrincipal reloadData];
+#pragma mark - unwindSegue
+
+- (IBAction)unwindToConfirmPurchase:(UIStoryboardSegue *)segue {
 }
 
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toDetail"]) {
-        DetailPersonViewController *navigationController = [segue destinationViewController];
-        navigationController.personInfo = sender;
+        //DetailPersonViewController *navigationController = [segue destinationViewController];
+        //navigationController.personInfo = sender;
     }}
 
 

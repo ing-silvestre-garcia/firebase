@@ -49,32 +49,59 @@
             </objects>
             <point key="canvasLocation" x="-178.40000000000001" y="-203.74812593703149"/>
         </scene>
-        <!--Lista-->
+        <!--listado-->
         <scene sceneID="G98-FR-PtV">
             <objects>
                 <tableViewController id="J8b-mz-vzt" customClass="Lista" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p7X-3n-RrP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p7X-3n-RrP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aTn-Zf-D58">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aTn-Zf-D58" id="s4y-DH-rE1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="UKX-PW-pdr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="aTn-Zf-D58">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aTn-Zf-D58" id="s4y-DH-rE1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FV9-fL-tMG">
+                                        <rect key="frame" x="0.0" y="66" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FV9-fL-tMG" id="HOf-1C-Jw6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6bF-H2-Rhi">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6bF-H2-Rhi" id="HIa-5g-mFm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6PQ-cs-RGk">
+                                        <rect key="frame" x="0.0" y="154" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6PQ-cs-RGk" id="lug-rp-N0B">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="J8b-mz-vzt" id="cQc-LU-w7W"/>
                             <outlet property="delegate" destination="J8b-mz-vzt" id="Ejq-Eu-aNg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fAM-eZ-Z0i"/>
+                    <navigationItem key="navigationItem" title="listado" id="fAM-eZ-Z0i"/>
                     <connections>
-                        <outlet property="tablePrincipal" destination="aTn-Zf-D58" id="CIr-vS-I4l"/>
                         <segue destination="2Bc-1Z-jQ6" kind="push" identifier="toDetail" id="2i1-ON-Zac"/>
                     </connections>
                 </tableViewController>
@@ -95,17 +122,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalle producto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-9j-iA8">
-                                <rect key="frame" x="180" y="118" width="128" height="21"/>
+                                <rect key="frame" x="123" y="170" width="128" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLp-dc-8YX">
+                                <rect key="frame" x="124" y="414" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirmar Compra"/>
+                                <connections>
+                                    <action selector="btnConfirm:" destination="2Bc-1Z-jQ6" eventType="touchUpInside" id="hPq-DO-ABA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="1WQ-6x-bZh"/>
                     <connections>
+                        <outlet property="btnConfirm" destination="YLp-dc-8YX" id="HQZ-QM-gUv"/>
                         <segue destination="s0i-uf-JsN" kind="push" identifier="toConfirm" id="fbS-1i-vBh"/>
                     </connections>
                 </viewController>
@@ -126,21 +162,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Compra exitosa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY5-RK-3m5">
-                                <rect key="frame" x="166" y="156" width="120" height="21"/>
+                                <rect key="frame" x="127" y="189" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TY1-2m-kcZ">
+                                <rect key="frame" x="134" y="391" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Regresar a lista"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="s0i-uf-JsN" eventType="touchUpInside" id="Xoa-ym-H35"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="n1b-IQ-trJ"/>
                     <connections>
-                        <segue destination="J8b-mz-vzt" kind="push" identifier="toTable" id="nrU-Ge-3zm"/>
+                        <outlet property="btnBack" destination="TY1-2m-kcZ" id="0JG-OT-sfu"/>
+                        <segue destination="oKe-y7-66E" kind="unwind" identifier="toTable" unwindAction="unwindToConfirmPurchase:" id="zve-1w-t7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJB-pZ-fs2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oKe-y7-66E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="878" y="592"/>
         </scene>
@@ -161,7 +207,4 @@
             <point key="canvasLocation" x="-972" y="-215"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nrU-Ge-3zm"/>
-    </inferredMetricsTieBreakers>
 </document>

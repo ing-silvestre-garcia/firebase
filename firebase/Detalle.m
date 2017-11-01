@@ -7,7 +7,7 @@
 //
 
 #import "Detalle.h"
-
+@import Firebase;
 @interface Detalle ()
 
 @end
@@ -22,6 +22,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnConfirm:(id)sender {
+    [FIRAnalytics logEventWithName:@"boton_confirmar"
+                        parameters:@{
+                                     @"name": @"detalle",
+                                     @"full_text": @"confirmaron la compra"
+                                     }];
+    [self performSegueWithIdentifier:@"toConfirm" sender:nil];
 }
 
 /*

@@ -7,7 +7,7 @@
 //
 
 #import "Confirmacion.h"
-
+@import Firebase;
 @interface Confirmacion ()
 
 @end
@@ -22,6 +22,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)btnBack:(id)sender {
+    [FIRAnalytics logEventWithName:@"boton_regresar"
+                        parameters:@{
+                                     @"name": @"confirmacion",
+                                     @"full_text": @"regresan a lista de productos"
+                                     }];
+    [self performSegueWithIdentifier:@"toTable" sender:nil];
 }
 
 /*
