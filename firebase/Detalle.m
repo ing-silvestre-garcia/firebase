@@ -9,6 +9,9 @@
 #import "Detalle.h"
 @import Firebase;
 @interface Detalle ()
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblPrice;
+@property (weak, nonatomic) IBOutlet UIImageView *img;
 
 @end
 
@@ -17,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (self.productInfo != nil) {
+        self.lblPrice.text = self.productInfo[@"price"];
+        self.lblName.text = self.productInfo[@"name"];
+        self.img.image = self.productInfo[@"image"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,5 +10,5 @@
 
 @interface Detalle : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnConfirm;
-
+@property NSDictionary *productInfo;
 @end

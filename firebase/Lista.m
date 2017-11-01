@@ -7,7 +7,7 @@
 //
 
 #import "Lista.h"
-#import "cellMainTable.h"
+#import "Detalle.h"
 @import Firebase;
 @interface Lista ()
 
@@ -24,7 +24,7 @@
                                      @"name": @"lista",
                                      @"full_text": @"accedieron a la pantalla de lista"
                                      }];
-    
+    [self initController];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -41,16 +41,29 @@
 - (void)initController {
     self.characters = [[NSMutableArray alloc] init];
     [self.characters addObject:@{
-                                 @"name":@"1"
+                                 @"name":@"Laptop Dell Inspiron 15 Serie 7000 Gaming 15 Pulgada",
+                                 @"price": @"$24,749",
+                                 @"image": [UIImage imageNamed:@"liverpool1"]
                                  }];
     [self.characters addObject:@{
-                                 @"name":@"2"
+                                 @"name":@"Smartwatch para caballero Fossil Q ",
+                                 @"price": @"$4,649",
+                                 @"image": [UIImage imageNamed:@"liverpool2"]
                                  }];
     [self.characters addObject:@{
-                                 @"name":@"3"
+                                 @"name":@"Jumpsuit liso BCBGeneration",
+                                 @"price": @"$1,691",
+                                 @"image": [UIImage imageNamed:@"liverpool3"]
                                  }];
     [self.characters addObject:@{
-                                 @"name":@"4"
+                                 @"name":@"Smartphone Huawei P10 Lite 3 GB RAM negro AT&T",
+                                 @"price": @"$5,499",
+                                 @"image": [UIImage imageNamed:@"liverpool4"]
+                                 }];
+    [self.characters addObject:@{
+                                 @"name":@"Cafetera prima latte Oster roja",
+                                 @"price": @"$4,249",
+                                 @"image": [UIImage imageNamed:@"liverpool5"]
                                  }];
 }
 
@@ -64,7 +77,7 @@
 
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 64;
+    return 108;
 }
 //-------------------------------------------------------------------------------
 
@@ -73,7 +86,7 @@
     NSDictionary *seleccionDictionary = self.characters[indexPath.row];
     
     
-    [self performSegueWithIdentifier:@"toDetail" sender:seleccionDictionary	];
+    [self performSegueWithIdentifier:@"toDetail" sender:seleccionDictionary];
 }
 /**********************************************************************************************/
 #pragma mark - Action methods
@@ -88,8 +101,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toDetail"]) {
-        //DetailPersonViewController *navigationController = [segue destinationViewController];
-        //navigationController.personInfo = sender;
+        Detalle *detail = [segue destinationViewController];
+        detail.productInfo = sender;
     }}
 
 
