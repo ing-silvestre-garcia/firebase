@@ -41,16 +41,16 @@
 - (void)initController {
     self.characters = [[NSMutableArray alloc] init];
     [self.characters addObject:@{
-                                 @"name":@"Zapato 1"
+                                 @"name":@"1"
                                  }];
     [self.characters addObject:@{
-                                 @"name":@"Zapato 2"
+                                 @"name":@"2"
                                  }];
     [self.characters addObject:@{
-                                 @"name":@"Zapato 3"
+                                 @"name":@"3"
                                  }];
     [self.characters addObject:@{
-                                 @"name":@"Zapato 4"
+                                 @"name":@"4"
                                  }];
 }
 
@@ -72,20 +72,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *seleccionDictionary = self.characters[indexPath.row];
     
-    [self performSegueWithIdentifier:@"toDetail" sender:seleccionDictionary];
+    
+    [self performSegueWithIdentifier:@"toDetail" sender:seleccionDictionary	];
 }
 /**********************************************************************************************/
 #pragma mark - Action methods
 /**********************************************************************************************/
-- (IBAction)btnAddPressed:(id)sender {
-    /**
-     [self.userNames addObject:@"Walter"];
-     [self.userAges addObject:@"37 años"];
-     [self.userImages addObject:@"jon.jpg"];
-     [self.tblMain reloadData];
-     */
-    [self performSegueWithIdentifier:@"toNewPerson" sender:nil];
-}
 
 #pragma mark - unwindSegue
 
